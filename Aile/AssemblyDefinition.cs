@@ -26,7 +26,11 @@ namespace Aile
 
                 if (_streamLength > 0)
                 {
-                    // start file processing here
+                    if (FileParserUtils.IsWin32Binary(_binaryReader.ReadBytes(2)))
+                    {
+                        Debug.WriteLine("we got a valid file!");
+                    }
+
                 }
             }
             catch (FileNotFoundException)
