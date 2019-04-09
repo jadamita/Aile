@@ -23,5 +23,10 @@ namespace Aile.Core.Headers.Fields
         {
             return this._fieldName;
         }
+
+        public byte[] Parse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

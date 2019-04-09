@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Aile.Core.Headers.Fields
@@ -22,6 +23,13 @@ namespace Aile.Core.Headers.Fields
         public string GetHeaderName()
         {
             return this._fieldName;
+        }
+
+        public byte[] Parse()
+        {
+            string byteString = BitConverter.ToString(_headerBytes);
+            Debug.WriteLine(byteString);
+            return (_headerBytes);
         }
     }
 }

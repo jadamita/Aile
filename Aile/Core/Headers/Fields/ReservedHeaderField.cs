@@ -24,5 +24,10 @@ namespace Aile.Core.Headers.Fields
         {
             return "RESERVED";
         }
+
+        public byte[] Parse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

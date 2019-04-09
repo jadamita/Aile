@@ -9,5 +9,7 @@ namespace Aile.Core.Headers
         int GetFieldSize();
 
         string GetHeaderName();
+
+        byte[] Parse();
     }
 }

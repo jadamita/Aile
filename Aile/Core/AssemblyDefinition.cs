@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Diagnostics;
 using Aile.Util;
+using Aile.Core.Headers;
 
 namespace Aile
 {
@@ -14,6 +15,9 @@ namespace Aile
         private long _streamLength;
 
         private BinaryReader _binaryReader;
+
+        // Headers
+        private DOSHeader _dosHeader;
 
         public AssemblyDefinition(string assemblyFilePath)
         {
@@ -30,7 +34,6 @@ namespace Aile
                     {
                         Debug.WriteLine("we got a valid file!");
                     }
-
                 }
             }
             catch (FileNotFoundException)
