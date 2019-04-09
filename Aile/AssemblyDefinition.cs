@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Diagnostics;
+using Aile.Util;
 
 namespace Aile
 {
@@ -22,6 +23,11 @@ namespace Aile
                 
                 if (_binaryReader.BaseStream.Length > 0)
                     this._streamLength = _binaryReader.BaseStream.Length;
+
+                if (_streamLength > 0)
+                {
+                    // start file processing here
+                }
             }
             catch (FileNotFoundException)
             {
